@@ -14,7 +14,7 @@ sketches for mejeriet 12 nov 2022
 
 mejeriet.002.lua produces something like this:
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/https://youtu.be/_rZtMqqKhrU/0.jpg)](https://www.youtube.com/watch?v=https://youtu.be/_rZtMqqKhrU)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/_rZtMqqKhrU/0.jpg)](https://www.youtube.com/watch?v=_rZtMqqKhrU)
 
 
 oceanTriangle produces something like this:
