@@ -20,5 +20,3 @@ mejeriet.002.lua produces something like this:
 oceanTriangle produces something like this:
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/-iaXYzhgxsY/0.jpg)](https://www.youtube.com/watch?v=-iaXYzhgxsY)
-
-https://youtu.be/-iaXYzhgxsY
