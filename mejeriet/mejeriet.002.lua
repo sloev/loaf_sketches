@@ -1,5 +1,4 @@
 -- create new images
-vPlayer1 = of.VideoPlayer()
 outputFbo = of.Fbo()
 
 serverTemp = syphon.Server()
@@ -21,6 +20,15 @@ client = syphon.Client()
 
 rotateFoo = 0
 expandFoo = 0.01
+
+vPlayer = of.VideoPlayer()
+imageMask = of.Image()
+shader = of.Shader()
+videofboWidth = 0
+videofboHeight = 0
+videofbo = of.Fbo()
+videofboComposite = of.Fbo()
+
 ----------------------------------------------------
 function setup()
 
@@ -45,6 +53,16 @@ function setup()
     client:setup()
     client:set("temp", "loaf")
 
+    imageMask:load("images/oceanMask.png")
+
+    shader:load("shadersGL2/alphamask")
+    vPlayer:load("videos/ocean.mov")
+    vPlayer:setLoopState(of.LOOP_NORMAL)
+    vPlayer:play()
+    videofboWidth = vPlayer:getWidth()
+    videofboHeight = vPlayer:getHeight()
+    videofbo:allocate(videofboWidth, videofboHeight, of.TEXTURE_RGBA);
+    videofboComposite:allocate(videofboWidth, videofboHeight, of.TEXTURE_RGBA);
     -- vPlayer1:load("videos/wave.mp4")
     -- vPlayer1:setLoopState(of.LOOP_NORMAL)
     -- vPlayer1:play()

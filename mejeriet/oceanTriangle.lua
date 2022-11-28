@@ -4,6 +4,7 @@ imageMask = of.Image()
 shader = of.Shader()
 fboWidth = 0
 fboHeight = 0
+
 -- empty template script with event callbacks
 function setup()
     of.enableAlphaBlending();
@@ -45,19 +46,23 @@ function draw()
     fboComposite:beginFbo()
     of.clear(0,0,0,0)
 
+    
+
     of.pushMatrix()
     of.translate(fboWidth/2, fboHeight/2)
+    of.rotateDeg(-120,0,0,1)
+
     fbo:draw(-fboWidth/2,-fboHeight/3,fboWidth, fboHeight)
-    of.rotateDeg(120,0,0,1)
+    of.rotateDeg(240,0,0,1)
     fbo:draw(-fboWidth/2,-fboHeight/3,fboWidth, fboHeight)
 
-    of.rotateDeg(120,0,0,1)
+    of.rotateDeg(-120,0,0,1)
     fbo:draw(-fboWidth/2,-fboHeight/3,fboWidth, fboHeight)
 
     of.popMatrix()
     fboComposite:endFbo()
 
-    fboComposite:draw(0,0,of.getWidth(), of.getHeight())
+    fboComposite:draw(-of.getWidth()/5,-of.getHeight()/5,of.getWidth()+(of.getWidth()/5)*2, of.getHeight()+(of.getHeight()/5)*2)
 
 
 end

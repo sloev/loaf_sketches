@@ -22,9 +22,9 @@ plane = of.PlanePrimitive()
 client = syphon.Client()
 
 rotateFoo = 0
-expandFoo = 0.01
-resolutionFoo = 200
-resolutionBar = 200
+expandFoo = 0.2
+resolutionFoo = 900
+resolutionBar = 500
 
 crossFoo = true
 crossBar = true
@@ -171,8 +171,11 @@ function oscReceived(message)
         end
     elseif message:getAddress() == "/resolution/foo" then
         resolutionFoo = message:getArgAsFloat(0)
+        print(tostring(resolutionFoo))
     elseif message:getAddress() == "/resolution/bar" then
         resolutionBar = message:getArgAsFloat(0)
+        print(tostring(resolutionBar))
+
     end
 
 end
